@@ -43,6 +43,11 @@ header .container-fluid .navbar{
 header .container-fluid .navbar-nav a{
  font-size: 18px;
  text-transform: uppercase;
+ color: #ffffff;
+}
+
+header .container-fluid .navbar-nav a.hover{
+  color: #ffffff;
 }
 
 header .container-fluid .navbar-nav .nav-item{
@@ -87,8 +92,11 @@ header .container .row .col-md-7 .heading .buttons{
   padding:10px;
 }
 
-header .container-fluid .navbar-nav .active{
-  border-bottom: 3px solid #D63434;;
+header .container-fluid .nav-item .active{
+  border-bottom: 3px solid #D63434;
+  width: 100%;
+  border-radius: 1px;
+  transition: 0.5s ease;
 }
 
 
@@ -130,15 +138,16 @@ main .section1 .container .service-heading p{
   background-size: cover;
  }
 
-.section2 .element2{
+.section2 .element2 , .section4 .element2{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-main .section2 .container-fluid .element2 h2{
+main .section2 .container-fluid .element2 h2 ,main .section4 .container-fluid .element2 h2{
   padding: 10px;
   color: #ffffff;
+  text-transform: uppercase;
 }
 main .section2 .container-fluid .element2 .btn{
   background: #D63434;
@@ -151,17 +160,23 @@ width: 15%;
 }
 
 
-/*  Section 3 */
 
+
+/*  Section 3 */
+#newcarouselExampleCaptions{
+  display: none;
+}
 .bborder{
   border: 2px solid #D63434;
   border-radius: 5px;
   width: 15%;
 }
-.section3 .carousel-inner .carousel-item .row .col-md-4 img{
+
+.section3 #carouselExampleCaptions .carousel-inner .carousel-item .row .col-md-4 img{
   height: 162px;
   width: 165px;
- padding-top: 5px;
+ padding: 5px;
+ border-radius: 10px;
 }
 
 .section3 #carouselExampleCaptions .carousel-indicators li{
@@ -177,13 +192,109 @@ width: 15%;
   width: 7%;
 }
 
-.section3 .container .row .col-md-12 .team .row .col-md-2 img{
+.section3 .row .col-md-12 .team .row .col-md-2 img{
   width: 175px;
   height: 225px;
+  border-radius: 10px;
 }
 
+.section3 .team1{
+  display: none;
+}
+
+/*  Section 4 */
+
+ .section4{
+  background-image: linear-gradient(to bottom, transparent 0%, black 100%),url(../images/bg.jpg);
+  background-size: cover;
+ }
+
+ main .section4 .container-fluid .element2 p{
+  padding: 20px;
+  color: #ffffff;
+ }
+
+  main .section4 .container-fluid .element2 i{
+    color: #D63434;
+    font-size: 50px;
+  }
+
+  main .section4 .container-fluid .element2 .btn{
+    border: none;
+    box-shadow: none;
+  }
+
+/*  Section 5 */
 
 
+
+#news-blog .row .div1 img ,#news-blog .row .div5 img{
+  height: 100%;
+  width: 100%;
+}
+#news-blog .row .div3 img{
+  width:100%;
+  height: 100%;
+}
+#news-blog .row .div2,#news-blog .row .div4,#news-blog .row .div6{
+  width: 25%;
+  position: relative;
+  background: #343232;
+}
+#news-blog .row .div2 .shape{
+  position: absolute;
+  background: #343232;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  left: -15px;
+  top: 25px;
+}
+
+#news-blog .row .div4 .shape{
+  position: absolute;
+  background: #343232;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  right: -15px;
+  top: 25px;
+}
+
+#news-blog .row .div6 .shape{
+  position: absolute;
+  background: #343232;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  top: -15px;
+  right: 25px;
+}
+
+#news-blog .row .div2 h3,#news-blog .row .div4 h3,#news-blog .row .div6 h3{
+word-wrap: break-word;
+text-transform: uppercase;
+font-size: 20px;
+color: #D63434;
+}
+#news-blog .row .div2 .cborder ,#news-blog .row .div4 .cborder,#news-blog .row .div6 .cborder{
+margin-left: 25px;
+width: 25%;
+}
+#news-blog .row .div2 p,#news-blog .row .div4 p,#news-blog .row .div6 p{
+  word-wrap: break-word;
+  font-size: 12px;
+}
+#news-blog .row .div2 h6,#news-blog .row .div4 h6,#news-blog .row .div6 h6{
+ position: absolute;
+ right: 15px;
+ bottom: 10px;
+ color: #D63434;
+}
+
+#news-blog1{
+  display: none;
+}
 
 /*  Footer */
 .footer-main{
@@ -295,6 +406,15 @@ width: 25%;
 }
 
 @media screen and (max-width: 577px) {
+.container-fluid .navbar .navbar-toggler-icon{
+     color: #ffffff;
+    border-radius: 5px;
+    border: 2px solid #dddddd;
+    padding: 2px;
+  }
+header .navbar-brand{
+  padding: 5px;
+}
 
 header .container-fluid{
   margin-top: 45px;
@@ -316,6 +436,76 @@ header .container-fluid .navbar{
 main .section2 .container-fluid .element2 .btn{
   width: 35%;
 }
+#carouselExampleCaptions{
+  display: none;
+}
+#newcarouselExampleCaptions{
+  display: block;
+}
+
+.section3 .team{
+  display: none;
+}
+.section3 .team1{
+  display: block;
+}
+
+.section3 #newcarouselExampleCaptions .carousel-inner .carousel-item .row .col-sm-12 img{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+/*.section3 .row .col-md-12 .team1 .row .col-sm-6 img{
+  width: 175px;
+  height: 225px;
+}*/
+
+.section3 #newcarouselExampleCaptions .carousel-indicators,.section3 #teamcarouselExampleCaptions .carousel-indicators{
+  margin-bottom: -30px;
+}
+.section3 #newcarouselExampleCaptions .carousel-indicators li{
+  background-color: #D63434;
+}
+
+.section3 #teamcarouselExampleCaptions .carousel-indicators li{
+  background-color: #D63434;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.section3 #teamcarouselExampleCaptions .carousel-inner .carousel-item .row .col-sm-12 img{
+  width: 450px;
+  height: 350px;
+  padding: 0;
+  border-radius: 10px;
+
+}
+
+.section3 .container .row .col-md-12 .about-col .cborder{
+  width: 16%;
+}
+.section3 .container .row .col-md-12 .about-col{
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+/*  Section 5 */
+
+#news-blog{
+  display: none;
+}
+#news-blog1{
+  display: block;
+}
+
+#news-blog1 .row .div1 img,#news-blog1 .row .div3 img,#news-blog1 .row .div5 img{
+  height: 250px;
+  width: 483px;
+}
+
+
 
 .footer-main .contact-form .btn3{
   right: 16px;
